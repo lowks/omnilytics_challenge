@@ -18,6 +18,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: cd backend
-      - run: yarn
-      - run: yarn test
+      - run: cd backend && yarn
+      - run: cd backend && yarn test
