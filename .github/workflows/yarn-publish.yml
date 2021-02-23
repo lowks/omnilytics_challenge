@@ -28,5 +28,5 @@ jobs:
         run: yarn
       - name: Run Tests
         working-directory: ./backend
-        run: mocha
+        run: ./node_modules/mocha/bin/mocha
       
