@@ -13,23 +13,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.18.4]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: cd backend && yarn test
-   # - run: yarn test
-   # - uses: borales/actions-yarn@v2.0.0
-   #   with:
-   #     cmd: install
-   # - uses: borales/actions-yarn@v2.0.0
-   #   with:
-   #     cmd: test
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: cd backend
+      - run: yarn
+      - run: yarn test
