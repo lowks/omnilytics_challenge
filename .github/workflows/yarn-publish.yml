@@ -21,7 +21,8 @@ jobs:
       - name: Build Dependencies
         working-directory: ./backend
         run: yarn
-      - name: Test in Backend
-        working-directory: ./backend
-        run: yarn test
+      - name: Run Tests
+        uses: borales/actions-yarn@v2.0.0
+        with: 
+          cmd: --cwd backend test
       
