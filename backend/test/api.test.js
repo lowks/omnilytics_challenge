@@ -56,4 +56,8 @@ describe("Generate file with random objects", function () {
         done();
       });
   });
+  
+  afterEach(() => {
+   cleanup()
+  });
 });
