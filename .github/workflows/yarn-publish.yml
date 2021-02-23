@@ -23,5 +23,5 @@ jobs:
         run: yarn
       - name: Test in Backend
         working-directory: ./backend
-        run: yarn test
+        run: yarn test --forceExit
       
